@@ -13,7 +13,7 @@ vagrant plugin install vagrant-reload
 ## Lab
 
 Create a file called *Vagrantfile* in a directory, and paste the following content into it:
-```
+```yaml
 $elk = <<SCRIPT
 echo "Getting ELK"
 apt-get update
@@ -47,7 +47,7 @@ The elasticstack and Kibana instance takes a while to become ready after the VM 
 Download Winlogbeat (the zip file): https://www.elastic.co/downloads/beats/winlogbeat and extract the content
 
 Create the file winlogbeat-evtx.yml and paste the following:
-```
+```yaml
 winlogbeat.event_logs:
   - name: ${EVTX_FILE} 
     no_more_events: stop 
