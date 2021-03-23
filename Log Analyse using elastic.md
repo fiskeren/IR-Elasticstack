@@ -74,8 +74,8 @@ Remember to setup the kibana index patterns for *winlogbeat* for indexing.
 
 Kibana can be opened through http://127.0.0.1:5601/
 
-Username: *elastic*
-Password: *changeme*
+- Username: *elastic*
+- Password: *changeme*
 
 The ubuntu machine can be accessed using the build in ssh functionality in vagrant:
 ```
