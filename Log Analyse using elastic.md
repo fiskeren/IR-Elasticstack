@@ -1,6 +1,8 @@
 # Quick setup Vagrant with ELK
 Quick and dirty Vagrant script to create an Ubuntu 20.04 with elasticstack and Kibana.
 
+The elastic stack used is the docker version from https://github.com/deviantony/docker-elk.git.
+
 ## Prerequisites
 
 - Virtualbox https://www.virtualbox.org/
@@ -65,7 +67,7 @@ output.elasticsearch:
 Parts stolen from: https://burnhamforensics.com/2019/11/19/manually-upload-evtx-log-files-to-elk-with-winlogbeat-and-powershell/
 
 Inject the evtx logs with following command:
-```
+```powershell
 .\winlogbeat.exe -e -c .\winlogbeat-evtx.yml -E EVTX_FILE=c:\backup\Security-2019.01.evtx
 ```
 
@@ -78,9 +80,15 @@ Kibana can be opened through http://127.0.0.1:5601/
 - Username: *elastic*
 - Password: *changeme*
 
-The ubuntu machine can be accessed using the build in ssh functionality in vagrant:
-```
+The ubuntu machine can be logged in to from the host machine using the build in ssh functionality in vagrant:
+
+```powershell
 vagrant ssh
+```
+
+Internally in the vagrant vm, statistic of the different docker instances can be seen using the following command.
+
+```bash
 # See CPU/memory stats
 sudo docker stats --all
 ```
