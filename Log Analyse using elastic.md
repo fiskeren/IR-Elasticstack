@@ -1,5 +1,6 @@
 # Quick setup Vagrant with ELK
-Quick and dirty Vagrant script to create an Ubuntu 20.04
+Quick and dirty Vagrant script to create an Ubuntu 20.04 with elasticstack and Kibana.
+
 ## Prerequisites
 
 - Virtualbox https://www.virtualbox.org/
